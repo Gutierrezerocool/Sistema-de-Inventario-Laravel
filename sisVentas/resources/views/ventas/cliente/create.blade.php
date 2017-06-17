@@ -36,8 +36,8 @@
 				<label for="">Tipo Documento</label>
 				<select name="tipo_documento" class="form-control">
 						<option selected value=" "> Elige una opción </option>			
-						<option value="cedula">Cédula</option>
-						<option value="pasaporte">Pasaporte</option>
+						<option value="Cédula">Cédula</option>
+						<option value="Pasaporte">Pasaporte</option>
 				</select>
 			</div>
 		</div>

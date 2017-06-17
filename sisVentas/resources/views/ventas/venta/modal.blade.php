@@ -1,6 +1,6 @@
-<div class="modal fade modal-slide-in-right" aria-hidden="true" role="dialog" tabindex="-1" id="modal-delete-{{$ing->idingreso}}">
+<div class="modal fade modal-slide-in-right" aria-hidden="true" role="dialog" tabindex="-1" id="modal-delete-{{$ven->idventa}}">
 
-	{!!Form::open(array('action'=>array('IngresoController@destroy',$ing->idingreso),'method'=>'delete'))!!}
+	{!!Form::open(array('action'=>array('VentaController@destroy',$ven->idventa),'method'=>'delete'))!!}
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -9,12 +9,12 @@
 						<span aria-hidden="true">x</span>
 					</button>
 
-					<h4 class="modal-title">Cancelar Ingreso</h4>
+					<h4 class="modal-title">Cancelar Venta</h4>
 
 				</div>
 
 				<div class="modal-body">
-					<p>Confirme si desea cancelar el ingreso al Almacén</p>
+					<p>Confirme si desea cancelar la venta seleccionada</p>
 				</div>
 
 				<div class="modal-footer">

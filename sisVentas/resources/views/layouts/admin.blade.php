@@ -48,16 +48,16 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <small class="bg-red">Online</small>
-                  <span class="hidden-xs">Johan Antonio Gutiérrez Medina</span>
+                  <small class="bg-red">Bienvenido</small>
+                  <span class="hidden-xs">{!!Auth::user()->name!!}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     
                     <p>
-                      www.incanatoit.com - Desarrollando Software
-                      <small>www.youtube.com/jcarlosad7</small>
+                      {!!Auth::user()->email!!}
+                      <small>Bienvenido</small>
                     </p>
                   </li>
                   
@@ -65,7 +65,7 @@
                   <li class="user-footer">
                     
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Cerrar</a>
+                      <a href="{!!URL::to('/logout')!!}" class="btn btn-default btn-flat">Cerrar</a>
                     </div>
                   </li>
                 </ul>
@@ -127,7 +127,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{!!URL::to('configuracion/usuario')!!}"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+                <li><a href="{!!URL::to('seguridad/usuario')!!}"><i class="fa fa-circle-o"></i> Usuarios</a></li>
                 
               </ul>
             </li>
@@ -195,24 +195,19 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2015-2020 <a href="www.softbyte.com">JG Software</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2015-2020 <a></a>.</strong> All rights reserved.
       </footer>
 
       
     <!-- jQuery 2.1.4 -->
     <script src="{{asset('js/jQuery-2.1.4.min.js')}}"></script>
+    @stack('scripts')
     <!-- Bootstrap 3.3.5 -->
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('js/app.min.js')}}"></script>
     <!-- Bootstrap Select -->
     <script src="{{asset('js/bootstrap-select.min.js')}}"></script>
-    
-    
-
-    @section('scripts')
-    @show
-
     
   </body>
 </html>

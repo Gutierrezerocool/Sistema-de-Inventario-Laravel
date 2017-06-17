@@ -11,9 +11,9 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
+Route::get('/', function () {
+    return view('login');
+});
 
 
 Route::resource('almacen/categoria','CategoriaController');
@@ -21,6 +21,12 @@ Route::resource('almacen/articulo','ArticuloController');
 Route::resource('ventas/cliente','ClienteController');
 Route::resource('compras/proveedor','ProveedorController');
 Route::resource('compras/ingreso','IngresoController');
+Route::resource('ventas/venta','VentaController');
+Route::resource('seguridad/usuario','UsuarioController');
 
-Route::get('/','SearchController@index');
-Route::get('/search','SearchController@search');
+Route::resource('log','LogController');
+Route::get('logout','LogController@logout');
+
+
+/*Route::get('/','SearchController@index');
+Route::get('/search','SearchController@search');*/
